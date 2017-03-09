@@ -1,0 +1,14 @@
+body {
+    background-color: #E74C3C;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    margin-top: 64px;
+    font-size: 32px;
+}
