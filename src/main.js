@@ -1,7 +1,6 @@
 import "./style.css";
+import { initTheme, toggleTheme } from "./utils";
 
-function toggleTheme() {
-  document.documentElement.classList.toggle("dark");
-}
+initTheme();
 
 document.querySelector("#theme-switch").addEventListener("click", toggleTheme);

@@ -17,7 +17,7 @@
     />
   </head>
   <body
-    class="bg-[linear-gradient(225deg,#a24bcf,#4b79cf,#4b79cf)] dark:bg-[linear-gradient(225deg,#434343,black)]"
+    class="bg-[conic-gradient(from_var(--gradient-angle)_at_200%_200%,#a24bcf,#4b79cf,#a24bcf)] dark:bg-[conic-gradient(from_var(--gradient-angle)_at_200%_200%,#28313B,#485461,#28313B)]"
   >
     <header class="fixed top-0 w-full backdrop-blur bg-slate-200/10">
       <nav class="flex items-center px-4 py-3 mx-auto max-w-7xl">
@@ -30,7 +30,7 @@
         </a>
         <div class="flex items-center justify-end flex-1">
           <ol
-            class="flex items-center justify-end gap-2 text-xl text-slate-200 underline-offset-4"
+            class="flex items-center justify-end gap-2 text-xl text-slate-200 underline-offset-4 max-sm:hidden"
           >
             <li>
               <a href="#about" class="hover:text-white hover:underline"
@@ -51,6 +51,9 @@
               >
             </li>
           </ol>
+          <a href="/resume/resume.pdf" class="hover:opacity-4 ml-4">
+            <div class="px-2 py-1 text-white border border-white">Resume</div>
+          </a>
           <div class="h-5 mx-6 border-l border-slate-200"></div>
           <button
             id="theme-switch"
@@ -58,7 +61,7 @@
             class="text-white hover:opacity-60"
           >
             <svg
-              data-light-theme
+              data-light-icon
               aria-hidden="true"
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +75,7 @@
               />
             </svg>
             <svg
-              data-dark-theme
+              data-dark-icon
               aria-hidden="true"
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
@@ -91,91 +94,104 @@
       </nav>
     </header>
     <main class="px-5 mx-auto max-w-7xl">
-      <section id="intro" class="flex items-center justify-center min-h-screen">
-        <div>
-          <p class="text-2xl text-white">Hi, my name is</p>
-          <h1 class="font-bold text-slate-100 text-7xl">Kaushal Meena</h1>
-          <h2 class="text-6xl text-slate-200">
-            I build applications for mobile and web
-          </h2>
-          <p class="max-w-lg my-2 text-xl text-slate-200">
-            I am experienced Front-end developer with a passion for crafting
-            high-quality, performant applications
-          </p>
-          <div class="flex gap-3 my-5 text-white">
-            <a
-              title="Github"
-              href="https://github.com/kaushalmeena"
-              class="hover:opacity-60"
-              rel="noopener noreferrer"
-              target="_blank"
+      <section id="intro" class="flex flex-col justify-center min-h-screen">
+        <p class="text-2xl text-white">Hi, my name is</p>
+        <h1 class="font-bold text-slate-100 text-7xl max-sm:text-5xl">
+          Kaushal Meena
+        </h1>
+        <h2 class="text-6xl text-slate-200 max-sm:text-3xl">
+          I build applications for mobile and web
+        </h2>
+        <p class="max-w-lg my-2 text-xl text-slate-200">
+          I am experienced Front-end developer with a passion for crafting
+          high-quality, performant applications
+        </p>
+        <div class="flex gap-4 mt-3">
+          <a href="/resume/resume.pdf" class="hover:opacity-40">
+            <div
+              class="text-center px-2 py-1 text-xl font-bold text-white border border-white min-w-[144px]"
             >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                height="40"
-                width="40"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                />
-              </svg>
-            </a>
-            <a
-              title="Linkedin"
-              href="https://www.linkedin.com/in/kaushalmeena"
-              class="hover:opacity-60"
-              rel="noopener noreferrer"
-              target="_blank"
+              View Resume
+            </div>
+          </a>
+          <a href="mailto:kaushalmeena256@gmail.com" class="hover:opacity-40">
+            <div
+              class="text-center px-2 py-1 text-xl font-bold text-white border border-white min-w-[144px]"
             >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                />
-              </svg>
-            </a>
-            <a
-              title="Mail"
-              href="mailto:kaushalmeena256@gmail.com"
-              class="hover:opacity-60"
-              rel="noopener noreferrer"
-              target="_blank"
+              Contact Me
+            </div>
+          </a>
+        </div>
+        <div class="flex gap-3 mt-6 text-white">
+          <a
+            title="Github"
+            href="https://github.com/kaushalmeena"
+            class="hover:opacity-60"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 448 512"
             >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"
-                />
-                <path
-                  d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"
-                />
-              </svg>
-            </a>
-          </div>
+              <path
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
+              />
+            </svg>
+          </a>
+          <a
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/kaushalmeena"
+            class="hover:opacity-60"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+              />
+            </svg>
+          </a>
+          <a
+            title="Twitter"
+            href="https://twitter.com/kaushal256"
+            class="hover:opacity-60"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"
+              />
+            </svg>
+          </a>
         </div>
       </section>
-      <section id="about" class="flex items-center justify-center min-h-screen">
+      <section id="about" class="flex items-center justify-center py-20">
         <div>
-          <h3 class="mb-2 text-4xl font-bold text-white">About Me</h3>
-          <p class="text-2xl text-slate-200">
+          <h3 class="mb-2 text-4xl font-bold text-white max-sm:text-3xl">About Me</h3>
+          <p class="text-2xl text-slate-200 max-sm:text-xl">
             Hi there! I'm Kaushal Meena, a highly skilled React, React Native,
             and Next.js developer with over 4 years of experience in the field.
             I am passionate about creating high-quality, scalable, and
@@ -187,21 +203,387 @@
             teams to bring ideas to life. I am always seeking to expand my
             knowledge and stay up-to-date with the latest trends and
             technologies in the industry. <br /><br />
-            Here are a few technologies I've been working with recently:
+            Skillset:
           </p>
-          <div class="flex mt-2 text-lg font-medium">
-            <span class="bg-blue-100 text-slate-900 mr-2 px-2.5 py-0.5 rounded"
-              >ReactJS</span
+          <div class="flex flex-wrap mt-2 text-lg font-medium">
+            <span class="badge">ReactJS</span>
+            <span class="badge">React Native</span>
+            <span class="badge">NextJS</span>
+            <span class="badge">Redux toolkit</span>
+            <span class="badge">Javascript</span>
+            <span class="badge">Typescript</span>
+            <span class="badge">Python</span>
+            <span class="badge">HTML, CSS & SCSS</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">REST APIs</span>
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="flex flex-col justify-center py-20">
+        <h3 class="mb-2 text-4xl font-bold text-white max-sm:text-3xl">Where I've Worked</h3>
+        <div class="mt-5">
+          <div class="text-2xl text-white font-semibold max-sm:text-xl">
+            Software Developement Engineer
+            <span class="text-pink-300 max-sm:block max-sm:text-lg"
+              >@ Sharechat</span
             >
-            <span class="bg-blue-100 text-slate-900 mr-2 px-2.5 py-0.5 rounded"
-              >React Native</span
+          </div>
+          <div class="text-xl text-white max-sm:text-base">
+            March 2022 - Present
+          </div>
+          <ul
+            class="text-xl text-white mt-4 ml-4 max-w-5xl max-sm:text-lg list-disc"
+          >
+            <li>
+              Developed inter-language MegaContest with configurable themes,
+              resulting in a 3% increase in monthly GMV
+            </li>
+            <li>
+              Built SlotMachine which had complex animations, delivering 0.6 Cr
+              monthly GMV and 2100 DAU
+            </li>
+            <li>
+              Improved Jest unit test coverage from 20% to 40% and reduced
+              linting errors by 60%
+            </li>
+            <li>
+              Collaborated with designers, project managers, and other engineers
+              and completed over 6+ UI Configurable features in ReactNative, for
+              Sharechat app serving 400+ million MAU
+            </li>
+          </ul>
+        </div>
+        <div class="mt-5">
+          <div class="text-2xl text-white font-semibold max-sm:text-xl">
+            Software Engineer
+            <span class="text-pink-300 max-sm:block max-sm:text-lg"
+              >@ OLX People (acquired by BetterPlace)</span
             >
-            <span class="bg-blue-100 text-slate-900 mr-2 px-2.5 py-0.5 rounded"
-              >Javascript</span
+          </div>
+          <div class="text-xl text-white max-sm:text-base">
+            June 2019 - March 2022
+          </div>
+          <ul
+            class="text-xl text-white mt-4 ml-4 max-w-5xl max-sm:text-lg list-disc"
+          >
+            <li>
+              Created highly reusable and maintainable UI component library
+              styled42 in the hybrid codebase in NextJS and ReactNative
+            </li>
+            <li>
+              Maintained on-page Lighthouse SEO score of the candidate-facing
+              website at >90
+            </li>
+            <li>
+              Reduced the number of bugs/errors reported on TrackJS for codebase
+              by 60%
+            </li>
+            <li>
+              Contributed to an increase in conversions by 5% by integrating
+              Truecaller SDK into the login flow, improving user experience and
+              streamlining the authentication process
+            </li>
+          </ul>
+        </div>
+        <div class="mt-5">
+          <div class="text-2xl text-white font-semibold max-sm:text-xl">
+            Software Engineer Intern
+            <span class="text-pink-300 max-sm:block max-sm:text-lg"
+              >@ WhitePanda</span
             >
-            <span class="bg-blue-100 text-slate-900 mr-2 px-2.5 py-0.5 rounded"
-              >Typescript</span
-            >
+          </div>
+          <div class="text-xl text-white max-sm:text-base">
+            May 2018 - July 2018
+          </div>
+          <ul
+            class="text-xl text-white mt-4 ml-4 max-w-5xl max-sm:text-lg list-disc"
+          >
+            <li>
+              Developed Client and Writer facing websites from scratch,
+              integrating RazorPay payment flow
+            </li>
+            <li>
+              Revamped Operations website with new UI, integrating APIs written
+              in CakePHP
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="work" class="flex flex-col justify-center py-20">
+        <h3 class="mb-2 text-4xl font-bold text-white max-sm:text-3xl">
+          Some Things I've Built
+        </h3>
+        <div class="flex max-sm:flex-col mt-8">
+          <img
+            alt="GetThatTool"
+            src="/projects/project1.png"
+            class="w-[400px] mr-4"
+          />
+          <div class="grow my-4">
+            <div class="text-2xl text-white font-semibold max-sm:text-xl">
+              Get That Tool
+            </div>
+            <p class="text-xl text-white mt-4">
+              A web app that lets you have all common JSON, CSV, YAML, XML, Text
+              and other tools and converters at one place.
+            </p>
+            <div class="flex flex-wrap mt-4 text-lg font-medium">
+              <span class="badge">NextJS</span>
+              <span class="badge">BlueprintJS</span>
+              <span class="badge">Styled-Components</span>
+              <span class="badge">Typescript</span>
+            </div>
+            <div class="flex items-center justify-end max-sm:justify-center text-white mt-4 gap-4">
+              <a
+                title="Github"
+                href="https://github.com/kaushalmeena/myapp-scrapthatpage"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 192 192"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                    d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 45.201-49.067 0-10.855-3.824-19.735-10.175-26.683 1.017-2.516 4.413-12.63-.987-26.32 0 0-8.296-2.672-27.202 10.204-7.912-2.213-16.371-3.308-24.784-3.352-8.414.044-16.872 1.14-24.785 3.352C52.457 19.558 44.162 22.23 44.162 22.23c-5.4 13.69-2.004 23.804-.987 26.32C36.824 55.498 33 64.378 33 75.233c0 38.204 23.149 46.603 45.2 49.067-3.551 3.071-6.719 9.138-6.719 18.41 0 6.416.03 22.621.059 27.29M27 130c9.939.703 15.67 9.735 15.67 9.735 8.834 15.199 23.178 10.803 28.815 8.265"
+                  />
+                </svg>
+              </a>
+              <a
+                title="Live link"
+                href="https://myapp-getthattool.netlify.app/"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex max-sm:flex-col mt-8">
+          <img
+            alt="ScraptThatPage"
+            src="/projects/project2.png"
+            class="w-[400px] mr-4"
+          />
+          <div class="grow my-4">
+            <div class="text-2xl text-white font-semibold max-sm:text-xl">
+              ScrapThatPage
+            </div>
+            <p class="text-xl text-white mt-4">
+              A desktop app that automates web scraper with easy to use script
+              actions.
+            </p>
+            <div class="flex flex-wrap mt-4 text-lg font-medium">
+              <span class="badge">React</span>
+              <span class="badge">Redux toolkit</span>
+              <span class="badge">Typescript</span>
+              <span class="badge">Puppeteer</span>
+            </div>
+            <div class="flex items-center justify-end max-sm:justify-center text-white mt-5">
+              <a
+                title="Github"
+                href="https://github.com/kaushalmeena/myapp-scrapthatpage"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  viewBox="0 0 192 192"
+                  fill="none"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                    d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 45.201-49.067 0-10.855-3.824-19.735-10.175-26.683 1.017-2.516 4.413-12.63-.987-26.32 0 0-8.296-2.672-27.202 10.204-7.912-2.213-16.371-3.308-24.784-3.352-8.414.044-16.872 1.14-24.785 3.352C52.457 19.558 44.162 22.23 44.162 22.23c-5.4 13.69-2.004 23.804-.987 26.32C36.824 55.498 33 64.378 33 75.233c0 38.204 23.149 46.603 45.2 49.067-3.551 3.071-6.719 9.138-6.719 18.41 0 6.416.03 22.621.059 27.29M27 130c9.939.703 15.67 9.735 15.67 9.735 8.834 15.199 23.178 10.803 28.815 8.265"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex max-sm:flex-col mt-8">
+          <img
+            alt="ShareMyCode"
+            src="/projects/project3.png"
+            class="w-[400px] mr-4"
+          />
+          <div class="grow my-4">
+            <div class="text-2xl text-white font-semibold max-sm:text-xl">
+              Share My Code
+            </div>
+            <p class="text-xl text-white mt-4">
+              A web app that facilitates realtime sharing of code editor using
+              socket.io library.
+            </p>
+            <div class="flex flex-wrap mt-4 text-lg font-medium">
+              <span class="badge">Express</span>
+              <span class="badge">WebSockets</span>
+              <span class="badge">Bootstrap</span>
+              <span class="badge">NodeJS</span>
+              <span class="badge">Realtime Editor</span>
+            </div>
+            <div class="flex items-center justify-end max-sm:justify-center text-white mt-4 gap-4">
+              <a
+                title="Github"
+                href="https://github.com/kaushalmeena/myapp-sharemycode"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 192 192"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                    d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 45.201-49.067 0-10.855-3.824-19.735-10.175-26.683 1.017-2.516 4.413-12.63-.987-26.32 0 0-8.296-2.672-27.202 10.204-7.912-2.213-16.371-3.308-24.784-3.352-8.414.044-16.872 1.14-24.785 3.352C52.457 19.558 44.162 22.23 44.162 22.23c-5.4 13.69-2.004 23.804-.987 26.32C36.824 55.498 33 64.378 33 75.233c0 38.204 23.149 46.603 45.2 49.067-3.551 3.071-6.719 9.138-6.719 18.41 0 6.416.03 22.621.059 27.29M27 130c9.939.703 15.67 9.735 15.67 9.735 8.834 15.199 23.178 10.803 28.815 8.265"
+                  />
+                </svg>
+              </a>
+              <a
+                title="Live link"
+                href="https://sharemycode.onrender.com/"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex max-sm:flex-col mt-8">
+          <img
+            alt="Digi-Cloak"
+            src="/projects/project4.png"
+            class="w-[400px] mr-4"
+          />
+          <div class="grow my-4">
+            <div class="text-2xl text-white font-semibold max-sm:text-xl">
+              Digi-Cloak
+            </div>
+            <p class="text-xl text-white mt-4">
+              A web app that hides secrets in plain sight securely in images
+              with the help of AES encryption and LSB steganography technique.
+            </p>
+            <div class="flex flex-wrap mt-4 text-lg font-medium">
+              <span class="badge">Angluar</span>
+              <span class="badge">Typescript</span>
+              <span class="badge">SCSS</span>
+              <span class="badge">Cryptography</span>
+              <span class="badge">Steganography</span>
+            </div>
+            <div class="flex items-center justify-end max-sm:justify-center text-white mt-4 gap-4">
+              <a
+                title="Github"
+                href="https://github.com/kaushalmeena/digi-cloak"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 192 192"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="12"
+                    d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 45.201-49.067 0-10.855-3.824-19.735-10.175-26.683 1.017-2.516 4.413-12.63-.987-26.32 0 0-8.296-2.672-27.202 10.204-7.912-2.213-16.371-3.308-24.784-3.352-8.414.044-16.872 1.14-24.785 3.352C52.457 19.558 44.162 22.23 44.162 22.23c-5.4 13.69-2.004 23.804-.987 26.32C36.824 55.498 33 64.378 33 75.233c0 38.204 23.149 46.603 45.2 49.067-3.551 3.071-6.719 9.138-6.719 18.41 0 6.416.03 22.621.059 27.29M27 130c9.939.703 15.67 9.735 15.67 9.735 8.834 15.199 23.178 10.803 28.815 8.265"
+                  />
+                </svg>
+              </a>
+              <a
+                title="Live link"
+                href="https://kaushalmeena.github.io/digi-cloak/#/"
+                class="hover:opacity-60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="40"
+                  width="40"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10.0002 5H8.2002C7.08009 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -209,8 +591,8 @@
         id="contact"
         class="flex flex-col items-center justify-center min-h-[calc(100vh-154px)]"
       >
-        <h3 class="mb-2 text-4xl font-bold text-white">Get In Touch</h3>
-        <p class="max-w-lg text-2xl text-center text-slate-200">
+        <h3 class="mb-2 text-4xl font-bold text-white max-sm:text-3xl">Get In Touch</h3>
+        <p class="max-w-lg text-2xl text-center text-slate-200 max-sm:text-xl">
           My inbox is always open. Whether you have a question or just want to
           say hi, I'll try my best to get back to you!
         </p>
@@ -220,82 +602,79 @@
           rel="noopener noreferrer"
           target="_blank"
         >
-          CONNECT
+          Contact Me
         </a>
       </section>
     </main>
     <footer class="px-5 py-10 mx-auto text-center max-w-7xl">
       <div class="flex justify-center gap-5 mb-4 text-white">
         <a
-          title="Github"
-          href="https://github.com/kaushalmeena"
-          class="hover:opacity-60"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            xmlns="http://www.w3.org/2000/svg"
-            height="25"
-            width="25"
-            fill="currentColor"
-            viewBox="0 0 16 16"
+            title="Github"
+            href="https://github.com/kaushalmeena"
+            class="hover:opacity-60"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-            />
-          </svg>
-        </a>
-        <a
-          title="Linkedin"
-          href="https://www.linkedin.com/in/kaushalmeena"
-          class="hover:opacity-60"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            viewBox="0 0 16 16"
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"
+              />
+            </svg>
+          </a>
+          <a
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/kaushalmeena"
+            class="hover:opacity-60"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <path
-              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-            />
-          </svg>
-        </a>
-        <a
-          title="Mail"
-          href="mailto:kaushalmeena256@gmail.com"
-          class="hover:opacity-60"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            viewBox="0 0 16 16"
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+              />
+            </svg>
+          </a>
+          <a
+            title="Twitter"
+            href="https://twitter.com/kaushal256"
+            class="hover:opacity-60"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <path
-              d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"
-            />
-            <path
-              d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"
-            />
-          </svg>
-        </a>
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"
+              />
+            </svg>
+          </a>
       </div>
       <a
         href="https://github.com/kaushalmeena"
-        class="text-xl text-slate-100 hover:opacity-60"
+        class="text-xl text-slate-100 hover:opacity-60 max-sm:text-lg"
         rel="noopener noreferrer"
         target="_blank"
         >Designed and Developed by Kaushal Meena</a
