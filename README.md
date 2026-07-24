@@ -54,10 +54,10 @@ cd kaushalmeena.github.io
 
 ### Running
 
-Open `index.html` in your browser, or use a local dev server:
+Start the development server:
 
 ```bash
-npx serve .
+npm run dev
 ```
 
 ## License
