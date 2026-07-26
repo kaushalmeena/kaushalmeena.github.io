@@ -2,14 +2,14 @@
 
 # Portfolio
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-3DA639?logo=opensourceinitiative&logoColor=white)](LICENSE) [![HTML5](https://img.shields.io/badge/HTML5-5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=white)](https://developer.mozilla.org/docs/Web/JavaScript)
+
 **A personal website showcasing my work and career.**
 
 My portfolio site deployed on GitHub Pages — a concise overview of projects,
 skills, and experience, built as a static site.
 
 [**Visit the site**](https://kaushalmeena.github.io)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-3DA639?logo=opensourceinitiative&logoColor=white)](LICENSE) [![HTML5](https://img.shields.io/badge/HTML5-5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=white)](https://developer.mozilla.org/docs/Web/JavaScript)
 
 </div>
 
