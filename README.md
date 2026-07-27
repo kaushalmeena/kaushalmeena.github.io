@@ -60,6 +60,13 @@ Start the development server:
 npm run dev
 ```
 
+## Contributing
+
+Contributions are welcome! If you find a bug or have a feature request, please
+[open an issue](https://github.com/kaushalmeena/kaushalmeena.github.io/issues/new/choose)
+first to discuss it. For code changes, fork the repository, create a branch,
+and open a pull request.
+
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE)
